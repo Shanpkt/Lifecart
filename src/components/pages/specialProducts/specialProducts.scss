@@ -1,0 +1,10 @@
+.product_box{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
