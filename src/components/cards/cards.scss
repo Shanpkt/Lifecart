@@ -1,7 +1,7 @@
 .product-card{
     height:  400px;
     width:  240px;
-    border: 1px solid rgb(203, 14, 14);
+   // border: 1px solid rgb(203, 14, 14);
      background-color: white;
      position: relative;
 
@@ -17,7 +17,11 @@
      }
      .optionBox{
         position: absolute;
-        width: 100%;
+       // width: 100%;
+        justify-content: center;
+          gap: 47px;
+          padding: 0 10px;
+
        // border: 1px solid rgb(76, 0, 255);
         height: 100%;
         backdrop-filter: blur(5px);
@@ -25,24 +29,35 @@
         display: flex;
         flex-direction: column;
         align-items:center;
-        justify-content: space-between;
+        //justify-content: space-between;
 
         .box_continer_parent{
+            width: 100%;
            gap: 20px;
             h4{
                 margin: 0;
             }
-            border: 1px solid red;
+           // border: 1px solid red;
             display: flex;
             
             .box_continer{
-               border: 1px solid green;
+              // border: 1px solid green;
                 display: flex;
                 gap: 10px;
                .size_box{
-                width: 25px;
-                height: 25px;
+                width: 30px;
+                height: 30px;
                 border: 2px solid ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               // 
+               }
+               .size_box_color{
+               width: 30px;
+               height: 30px;
+                border-radius: 50px;
+
                }
             }
         }

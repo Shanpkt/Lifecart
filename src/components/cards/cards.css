@@ -1,0 +1,130 @@
+.product-card {
+  height: 400px;
+  width: 240px;
+  background-color: white;
+  position: relative;
+}
+
+.product-card .cartBtn {
+  background-color: tomato;
+  width: 70%;
+  border: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px 0;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 17px;
+}
+
+.product-card .optionBox {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 47px;
+  padding: 0 10px;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.22);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-card .optionBox .box_continer_parent {
+  width: 100%;
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-card .optionBox .box_continer_parent h4 {
+  margin: 0;
+}
+
+.product-card .optionBox .box_continer_parent .box_continer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.product-card .optionBox .box_continer_parent .box_continer .size_box {
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-card .optionBox .box_continer_parent .box_continer .size_box_color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.product-card .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 21.125rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.product-card .img-container img {
+  width: 100%;
+}
+
+.product-card .detil_Box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-card .detil_Box .letterBox {
+  border: 1px solid;
+}
+
+.product-card .detil_Box .letterBox .brand-name {
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
+.product-card .detil_Box .letterBox .product-price {
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card .quick-buy {
+  border: 1px solid;
+  bottom: 3rem;
+  cursor: pointer;
+  height: 1.5rem;
+  right: 3rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=cards.css.map */

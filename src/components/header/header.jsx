@@ -6,12 +6,14 @@ import { useState,useEffect } from 'react'
 import {useNavigate,useParams} from 'react-router-dom'
 function Header({toggle}) {
     const [dropShow,setDropShow]=useState("none")
+    const [cartdata,setcartData]=useState([{}])
     const navigate=useNavigate()
     
     console.log(toggle)
     const dropClick=()=>{
        if(dropShow=="none"){
         setDropShow("block")
+        fetchlocalstore()
        }else{
         setDropShow("none")
        }
@@ -21,6 +23,14 @@ function Header({toggle}) {
       };
       const backTOhome=()=>{
         navigate('/')
+      }
+      const fetchlocalstore=()=>{
+        const cartData=JSON.parse(localStorage.getItem('cart'))
+              // setcartData(cartData)
+              let CartArray=[]
+               CartArray.push(cartData)
+               setcartData(CartArray)
+             // console.log(cartData)
       }
   return (
     <div  style={{backgroundColor:!toggle?"white":""}} className='headerBand'>
@@ -38,7 +48,11 @@ function Header({toggle}) {
             <img src={inr}/>
             <div onClick={dropClick} className='cart_box'>
             <img src={cart}/>
-            <div style={{display:`${dropShow}`}} className='cart_dropDown'></div>
+            <div style={{display:`${dropShow}`}} className='cart_dropDown'>
+                {cartdata.map((e)=>{
+                    return <div>{e.name}</div>
+                })}
+            </div>
             </div>
         </div>
      </div>

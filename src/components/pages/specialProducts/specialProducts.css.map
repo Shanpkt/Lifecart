@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,WAAW;EACnB,gBAAgB,EAAE,KAAY;EAC9B,MAAM,EAAE,aAAa;EACrB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;EACvB,GAAG,EAAE,IAAI;CACZ",
+    "sources": [
+        "specialProducts.scss"
+    ],
+    "names": [],
+    "file": "specialProducts.css"
+}

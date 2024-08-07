@@ -10,7 +10,7 @@ function HomeCards({cardDt}) {
     <div onClick={()=>handelRout(cardDt.id)} className='homeCards_box'>
       <img src={cardDt.img} />
       <div className='blur_card_details'>
-        <h4>Jeans</h4>
+        <h4>{cardDt.id}</h4>
       </div>
     </div>
   )

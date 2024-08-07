@@ -3,7 +3,9 @@ import './cards.scss'
 import { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 function Cards({cardData}) {
-    const [flipOver,setFlipOver]=useState(true)
+    const [flipOver,setFlipOver]=useState(false)
+    const [colathSize,setCloathSize]=useState()
+    const [cloathColor,setCloathColor]=useState()
     const navigate=useNavigate()
     const  fliphandel=()=>{
         setFlipOver((prev)=>!prev)
@@ -12,6 +14,24 @@ function Cards({cardData}) {
         const topic="detail"
         navigate(`/item/${topic}/${id}`)
     }
+
+    const handelSize=(el)=>{
+       setCloathSize(el)
+    }
+
+    const addToCart=(ex)=>{
+      console.log(ex)
+      let productOnj={
+        _id:ex._id,
+        name:ex.name,
+        size:colathSize,
+        img:ex.img,
+        price:ex.price,
+        cat:ex.cat
+      }
+      console.log(productOnj)
+    localStorage.setItem('cart',JSON.stringify(productOnj))
+    }
   return (
     <div class="product-card " >
        { flipOver && <div className='optionBox'>
@@ -19,7 +39,7 @@ function Cards({cardData}) {
                 <h4>Size</h4>
              
               <div className='box_continer'>
-                {cardData.size.map((el)=>{return(<div className='size_box'>{el}</div>)})}
+                {cardData.size.map((el)=>{return(<div onClick={()=>handelSize(el)} className='size_box'>{el}</div>)})}
                 
                
               </div>
@@ -27,14 +47,17 @@ function Cards({cardData}) {
             </div>
             <div className='box_continer_parent'>
                 <h4>Color</h4>
+               
                 <div className='box_continer'>
-                <div className='size_box'></div>
-                <div className='size_box'></div>
-                <div className='size_box'></div>
-                <div className='size_box'></div>
+                {cardData.color.map((e)=>{
+                    return<div style={{backgroundColor:`${e}`}} className='size_box_color'></div>
+                })}
+                
                 </div>
             </div>
-            <button className='cartBtn'>Add to Cart</button>
+
+            <button onClick={()=>addToCart(cardData)} className='cartBtn'>Add to Cart</button>
+
             <h4 onClick={fliphandel}>Close</h4>
         </div>}
         
